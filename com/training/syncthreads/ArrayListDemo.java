@@ -13,7 +13,7 @@ public class ArrayListDemo {
 
 	public synchronized void addElement(int number) {
 		this.arrayList.add(number);
-		System.out.println("Adding, " + number);
+		System.out.println("Adding, " + arrayList);
 		notify();
 	}
 
@@ -26,8 +26,8 @@ public class ArrayListDemo {
 				e.printStackTrace();
 			}
 		} else {
-			item = this.arrayList.remove(this.arrayList.size()-1);
-			System.out.println("Removing, " + item);
+			this.arrayList.remove(this.arrayList.size()-1);
+			System.out.println("Removing, " + arrayList);
 
 		}
 		
